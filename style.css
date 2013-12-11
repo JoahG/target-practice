@@ -15,7 +15,7 @@ em{font-style:italic;}
 /* END CSS RESET */
 
 body {
-	font-family: "Helvetica Neue", sans-serif;
+	font-family: "Helvetica", sans-serif;
 }
 
 a {
@@ -39,13 +39,50 @@ header nav a:hover {
 	color: #aaa;
 }
 
-header nav a:active {
+header nav a.active {
 	color: #999;
+	cursor: default;
 }
 
 .container {
 	width: 960px;
 	margin: auto;
+}
+
+.state div.bigtext {
+	margin-top: 90px;
+}
+
+.state div.bigtext span {
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 0.75em;
+}
+
+.state div.bigtext span#con-big {
+	font-size: 431.9px;
+	word-spacing: 0.9px;
+}
+
+.state div.bigtext span#tact-big {
+	font-size: 359.9px;
+	word-spacing: 0.9px;
+}
+
+.state div.bigtext span#about-big {
+	font-size: 269.9px;
+	word-spacing: 0.9px;
+}
+
+.state div.bigtext span#home-big {
+	font-size: 319.9px;
+	word-spacing: 0.9;
+}
+
+.state > .container > span {
+	width: 100%;
+	display:block;
+	text-align: center;
 }
 
 .state:not(:target) {

@@ -2,31 +2,66 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="style.css" type="text/css">
-		<script src="script.js" type="javascript/js"></script>
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+		<script>
+			$(document).ready(function(){
+				if (document.location.hash === "") {
+					document.location.hash = "home"
+				}
+			});
+		</script>
 
 		<title>Target Practice</title>
 	</head>
 	<body>
-		<header>
-			<nav class="container">
-				<a href="#home">Home</a>
-				<a href="#about">About</a>
-				<a href="#contact">Contact</a>
-			</nav>
-		</header>
-		<div class="state" id="home">
+		<div class="state" id="home">	
+			<header>
+				<nav class="container">
+					<a href="#home" class="active">Home</a>
+					<a href="#about">About</a>
+					<a href="#contact">Contact</a>
+				</nav>
+			</header>
+
 			<div class="container">
-				This is Home!
+				<div class="bigtext">
+					<span id="home-big">Home</span>
+				</div>
+				<span>Where we all like to start.</span>
 			</div>
 		</div>
 		<div class="state" id="about">
+			<header>
+				<nav class="container">
+					<a href="#home">Home</a>
+					<a href="#about" class="active">About</a>
+					<a href="#contact">Contact</a>
+				</nav>
+			</header>
+
 			<div class="container">
-			This is About!
+				<div class="bigtext">
+					<span id="about-big">About</span>
+				</div>
+				<span>What we would all like to know</span>
 			</div>
 		</div>
 		<div class="state" id="contact">
+			<header>
+				<nav class="container">
+					<a href="#home">Home</a>
+					<a href="#about">About</a>
+					<a href="#contact" class="active">Contact</a>
+				</nav>
+			</header>
+
 			<div class="container">
-			This is Contact!
+				<div class="bigtext">
+					<span id="con-big">Con</span>
+					<span id="tact-big">tact</span>
+				</div>
+				<span>A concept too vague for words</span>
 			</div>
 		</div>
 	</body>

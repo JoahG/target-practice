@@ -1,0 +1,7 @@
+.state:not(:target) {
+	display:none;
+}
+
+:target {
+	display:block;
+}

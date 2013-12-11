@@ -68,6 +68,16 @@ header nav a.active {
 	position: relative;
 }
 
+.state:not(:target) {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.state:target {
+	opacity: 1;
+	visibility: visible;
+}
+
 .state div.bigtext {
 	margin-top: 140px;
 }
@@ -102,14 +112,4 @@ header nav a.active {
 	width: 100%;
 	display:block;
 	text-align: center;
-}
-
-.state:not(:target) {
-	opacity: 0;
-	visibility: hidden;
-}
-
-.state:target {
-	opacity: 1;
-	visibility: visible;
 }

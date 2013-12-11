@@ -8,22 +8,29 @@
 			$(document).ready(function(){
 				if (document.location.hash === "" || document.getElementById(document.location.hash.substr(1,document.location.hash.length-1)) == null) {
 					document.location.hash = "#!/";
+					$("#nav-home").addClass("active");
+				} else if (document.location.hash !== "") {
+					$("#nav-"+(document.location.hash.substr(3,document.location.hash.length-1) !== "" ? document.location.hash.substr(3,document.location.hash.length-1) : "home")).addClass("active");
 				}
+
+				$("header nav a").click(function(){
+					$("header nav a.active").removeClass("active");
+					$(this).addClass("active");
+				});
 			});
 		</script>
 
 		<title>Target Practice</title>
 	</head>
 	<body>
+		<header>
+			<nav class="container">
+				<a href="#!/" id="nav-home">Home</a>
+				<a href="#!/about" id="nav-about">About</a>
+				<a href="#!/contact" id="nav-contact">Contact</a>
+			</nav>
+		</header>
 		<div class="state" id="!/">	
-			<header>
-				<nav class="container">
-					<a href="#!/" class="active">Home</a>
-					<a href="#!/about">About</a>
-					<a href="#!/contact">Contact</a>
-				</nav>
-			</header>
-
 			<div class="container">
 				<div class="bigtext">
 					<span id="home-big">Home</span>
@@ -32,14 +39,6 @@
 			</div>
 		</div>
 		<div class="state" id="!/about">
-			<header>
-				<nav class="container">
-					<a href="#!/">Home</a>
-					<a href="#!/about" class="active">About</a>
-					<a href="#!/contact">Contact</a>
-				</nav>
-			</header>
-
 			<div class="container">
 				<div class="bigtext">
 					<span id="about-big">About</span>
@@ -48,14 +47,6 @@
 			</div>
 		</div>
 		<div class="state" id="!/contact">
-			<header>
-				<nav class="container">
-					<a href="#!/">Home</a>
-					<a href="#!/about">About</a>
-					<a href="#!/contact" class="active">Contact</a>
-				</nav>
-			</header>
-
 			<div class="container">
 				<div class="bigtext">
 					<span id="con-big">Con</span>
